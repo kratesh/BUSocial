@@ -28,28 +28,28 @@
             document.getElementById("spreadwork").style.display = "none";
             document.getElementById("spreadtravel").style.display = "none";
             document.getElementById("spreadnew").style.display = "block";
-            document.getElementById("spreadnew").scrollIntoView();
+            document.getElementById("spreadnew").scrollIntoView(true);
         }
         function tryshowimmi() {
             document.getElementById("spreadwork").style.display = "none";
             document.getElementById("spreadtravel").style.display = "none";
             document.getElementById("spreadnew").style.display = "none";
             document.getElementById("spreadimmi").style.display = "block";
-            document.getElementById("spreadimmi").scrollIntoView();
+            document.getElementById("spreadimmi").scrollIntoView(true);
         }
         function tryshowwork() {
             document.getElementById("spreadimmi").style.display = "none";
             document.getElementById("spreadtravel").style.display = "none";
             document.getElementById("spreadnew").style.display = "none";
             document.getElementById("spreadwork").style.display = "block";
-            document.getElementById("spreadwork").scrollIntoView();
+            document.getElementById("spreadwork").scrollIntoView(true);
         }
         function tryshowtravel() {
             document.getElementById("spreadimmi").style.display = "none";
             document.getElementById("spreadwork").style.display = "none";
             document.getElementById("spreadnew").style.display = "none";
             document.getElementById("spreadtravel").style.display = "block";
-            document.getElementById("spreadtravel").scrollIntoView();
+            document.getElementById("spreadtravel").scrollIntoView(true);
         }
         function killall() {
             document.getElementById("spreadnew").style.display = "none";
@@ -186,7 +186,7 @@
                         <h3>New students</h3>
                         <p>Documents need to be submitted, verification, and orientation.</p>
                         <p>
-                            <a href="#" class="btn btn-default" onclick="tryshownew()">More Info</a>
+                            <a class="btn btn-default" onclick="tryshownew()">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                         <h3>Immigration</h3>
                         <p>Classification, documents, and maintaining status</p>
                         <p>
-                            <a href="#" class="btn btn-default" onclick="tryshowimmi()">More Info</a>
+                            <a class="btn btn-default" onclick="tryshowimmi()">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                         <h3>Work and intern</h3>
                         <p>SSN, on-campus and off-campus employment.</p>
                         <p>
-                            <a href="#" class="btn btn-default" onclick="tryshowwork()">More Info</a>
+                            <a class="btn btn-default" onclick="tryshowwork()">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                         <h3>Travel and visas</h3>
                         <p>VISA, entering US and traveling.</p><br />
                         <p>
-                            <a href="#" class="btn btn-default" onclick="tryshowtravel()">More Info</a>
+                            <a class="btn btn-default" onclick="tryshowtravel()">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -240,9 +240,9 @@
             <div id="spreadnew" style="display: none">
                 <div class="row text-center">
                     <p>
-                        <a href="#" class="btn btn-default" onclick="showdoc()">Document & Procedures</a>
-                        <a href="#" class="btn btn-default" onclick="showche()">Check-in</a>
-                        <a href="#" class="btn btn-default" onclick="showori()">Orientation</a>
+                        <a class="btn btn-default" onclick="showdoc()">Document & Procedures</a>
+                        <a class="btn btn-default" onclick="showche()">Check-in</a>
+                        <a class="btn btn-default" onclick="showori()">Orientation</a>
                     </p>
                 </div>
 
@@ -362,9 +362,9 @@
             <div id="spreadimmi" style="display: none">
                 <div class="row text-center">
                     <p>
-                        <a href="#" class="btn btn-default" onclick="showisc()">Immigration Student Classifications</a>
-                        <a href="#" class="btn btn-default" onclick="showimd()">Immigration Document</a>
-                        <a href="#" class="btn btn-default" onclick="showsta()">Maintaining Status</a>
+                        <a class="btn btn-default" onclick="showisc()">Immigration Student Classifications</a>
+                        <a class="btn btn-default" onclick="showimd()">Immigration Document</a>
+                        <a class="btn btn-default" onclick="showsta()">Maintaining Status</a>
                     </p>
                 </div>
 
@@ -519,9 +519,9 @@
             <div id="spreadwork" style="display: none">
                 <div class="row text-center">
                     <p>
-                        <a href="#" class="btn btn-default" onclick="showssn()">Social Security Number</a>
-                        <a href="#" class="btn btn-default" onclick="showemp()">On-Campus Student Employment</a>
-                        <a href="#" class="btn btn-default" onclick="showwor()">Student Off-Campus Work and Training</a>
+                        <a class="btn btn-default" onclick="showssn()">Social Security Number</a>
+                        <a class="btn btn-default" onclick="showemp()">On-Campus Student Employment</a>
+                        <a class="btn btn-default" onclick="showwor()">Student Off-Campus Work and Training</a>
                     </p>
                 </div>
 
@@ -747,9 +747,9 @@
             <div id="spreadtravel" style="display: none">
                 <div class="row text-center">
                     <p>
-                        <a href="#" class="btn btn-default" onclick="showvis()">Applying for a Visa</a>
-                        <a href="#" class="btn btn-default" onclick="showent()">Entering the U.S.</a>
-                        <a href="#" class="btn btn-default" onclick="showtra()">Traveling with a US Visa</a>
+                        <a class="btn btn-default" onclick="showvis()">Applying for a Visa</a>
+                        <a class="btn btn-default" onclick="showent()">Entering the U.S.</a>
+                        <a class="btn btn-default" onclick="showtra()">Traveling with a US Visa</a>
                     </p>
                 </div>
 
