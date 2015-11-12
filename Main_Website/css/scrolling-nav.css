@@ -31,30 +31,76 @@ html {
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
 
+main {
+	/* important */
+	height: 100%;
+}
+
+#bu-social {
+    text-align: right;
+    text-decoration: #000000;
+    text-emphasis: #eee;
+    font-weight: bolder;
+}
+
+.cd-fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 .intro-section {
     height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
+    padding-top: 150px;        
+    background-image: url("../img/BU.jpg");
 }
 
-.about-section {
+.isso-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 30px;
     text-align: center;
-    background: #eee;
+    background-image: url("../img/texture_1.jpg");
 }
 
-.services-section {
+.shs-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 30px;
     text-align: center;
-    background: #fff;
+    background-image: url("../img/texture_5.jpg");
 }
 
-.contact-section {
+.fitrec-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 30px;
     text-align: center;
-    background: #eee;
+    background-image: url("../img/texture_2.jpg");
 }
+.courses-section {
+    height: 100%;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url("../img/texture_7.jpg");
+}
+.books-section {
+    height: 100%;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url("../img/texture_6.jpg");
+}
+
+.housing-section {
+    height: 100%;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url("../img/texture_10.jpg");
+}
+
+.lifeatbu-section {
+    height: 100%;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url("../img/texture_4.jpg");
+}
+
