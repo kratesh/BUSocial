@@ -81,6 +81,18 @@
                     <li>
                         <a class="page-scroll" href="#lifeatbu">Life at BU</a>
                     </li>
+                    <li>
+                        <a href="#openModal_Login" class="btn btn-default">Login Now!</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div id="openModal_Login" class="modalbg">
+        <div class="dialog">
+            <a href="#close" title="Close" class="close">X</a>
                     <form runat="server">
                         <asp:Panel ID ="Before" runat="server">
                             LoginID:
@@ -104,15 +116,6 @@
                             <asp:Label ID="stats" runat="server" Text=""></asp:Label>
                         </asp:Panel>
                     </form>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <div id="openModal_Login" class="modalbg">
-        <div class="dialog">
-            <a href="#close" title="Close" class="close">X</a>
 	    </div>
     </div>
     <!-- Intro Section -->
@@ -120,10 +123,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>BU Social</h1>
-                    <h2>By Students for Students</h2>
-                    <a class="btn btn-default page-scroll" href="#isso">Click Me to Scroll Down!</a>
-                    <a href="#openModal_Login" class="btn btn-default">Login Now!</a>
                 </div>
             </div>
         </div>
@@ -136,7 +135,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="isso">
+                    <div class="featurette" id="issod">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/isso_logo.jpg">
                       <h2 class="featurette-heading">International Students & Scholars Office <br> </h2>
@@ -155,7 +154,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="shs">
+                    <div class="featurette" id="shsd">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img/shs_logo.jpg">
                         <h2 class="featurette-heading">Student Health Services <br> </h2>
@@ -174,9 +173,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="fitrec">
+                    <div class="featurette" id="fitrecd">
                         <br><br><br>
-                      <img class="featurette-image img-circle img-responsive pull-right" src="img\fitrec_logo.jpg">
+                      <img class="featurette-image img-circle img-responsive pull-right" src="img/fitrec_logo.jpg">
                       
                       <h2 class="featurette-heading">Fitness & Recreational Center <br> </h2>
                         <h3>    <span class="text-muted">Helping you live a HAPPY AND HEALTHY life</span>
@@ -194,7 +193,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="courses">
+                    <div class="featurette" id="coursesd">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img\courses_logo.jpg">
                       
@@ -214,7 +213,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="books">
+                    <div class="featurette" id="booksd">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/books_logo.jpg">
                         <h2 class="featurette-heading">Books <br> </h2>
@@ -233,7 +232,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="housing">
+                    <div class="featurette" id="housingd">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img/housing_logo.jpg">
                         <h2 class="featurette-heading">Housing<br> </h2>
@@ -252,7 +251,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="lifeatbu">
+                    <div class="featurette" id="lifeatbud">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/life_logo.jpg">
                         <h2 class="featurette-heading">Life at BU<br> </h2>
