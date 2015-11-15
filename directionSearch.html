@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Basic GeoLocation Map</title>
+    <!-- Google Maps and Places API -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <script src="http://maps.googleapis.com/maps/api/directions/output?parameters"></script>
+    
+    <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+// 	var x = document.getElementById("geoLocation");
+// 	function getLocation() {
+// 		if (navigator.geolocation) {
+// 			navigator.geolocation.getCurrentPosition(showPosition);
+// 		} else {
+// 			x.innerHTML = "Geolocation is not supported by this browser."
+// 		}
+// 	}
+// 	function showPosition(position) {
+// 		x.innerHTML = "Latitude: " + position.coords.latitude + 
+// 		"<br>Longitude: " + position.coords.longitude; 
+// 	}
+// 	$(document).on('click', '#getGeolocation', function(){
+//     console.log("clicked");
+//     getLocation();
+// });
+
+//map page
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var directionsMap;
+var z = document.getElementById("directions-canvas");
+var directionsLatitude;
+var directionsLongitude;
+var start;
+var end;
+// var end = oform.elements.destination2.value;
+
+function getDirectionsLocation() {
+  console.log("getDirectionsLocation");
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showDirectionsPosition);
+    } else {
+        z.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showDirectionsPosition(position) {
+  console.log("showDirectionsPosition");
+    directionsLatitude = position.coords.latitude;
+    directionsLongitude = position.coords.longitude;
+    $('#Latitude2').val(directionsLatitude);
+    $('#Longitude2').val(directionsLongitude);
+    directionsLatLng = new google.maps.LatLng(directionsLatitude,directionsLongitude);
+    getDirections();
+}
+
+function getDirections() {
+  console.log('getDirections');
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  //start = new google.maps.LatLng(directionsLatLng);
+  var directionsOptions = {
+    zoom:12,
+    center:directionsLatLng
+  }
+  directionsMap = new google.maps.Map(document.getElementById("directions-canvas"), directionsOptions);
+  directionsDisplay.setMap(directionsMap);
+  var marker= new google.maps.Marker({
+    map: directionsDisplay,
+    postition: directionsLatLng,
+    title:'You are here'
+  });
+  calcRoute();
+}
+
+function calcRoute() {
+  console.log("calcRoute");
+  start = directionsLatLng;
+ // end = end;
+ // end = "8 Vinal Street, Boston";
+ // $('#destination').val(end);
+  var request = {
+    origin:start,
+    destination:end,
+    travelMode: google.maps.TravelMode.WALKING
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(result);
+    }
+  });
+}
+
+function ClickOnSearch() {
+  end = document.getElementById("destination2").value;
+  getDirectionsLocation();
+}
+
+// $( document ).on( "pageshow", "#directionsPage", function( event ) {
+//   getDirectionsLocation();
+// });
+</script>
+</head>
+<body onload="getDirectionsLocation()">
+    <div style="position:absolute; width:380px; height: 100%; overflow:auto; float:left; padding-left:10px; padding-right:10px;">
+        <h1>Google Places API</h1>
+        
+
+        <table>
+          <tr>
+            <td align="left">Current Latitude:</td>
+            <td align="left"><input id="Latitude2"/></td>
+          </tr>
+          <tr>
+            <td align="left">Current Longitude:</td>
+            <td align="left"><input id="Longitude2"/></td>
+          </tr>
+         <!--  <tr>
+            <td align="left">Destination:</td>
+            <td align="left"><input id="destination" /></td>
+          </tr> -->
+        </table>
+        <!-- input the destination below-->
+        <form>
+          Destination:
+          <input type="text" id="destination2">  
+          <input type="button" value="Search" onclick="ClickOnSearch()">
+        </form>
+        <!-- var getDestination = oform.elements.destination2.value; -->
+       
+        <p>
+		I'm using geolocatoin to automatically centre the map on the user's current location and searching route to a destination.
+		</p>
+    </div>
+<div id="directions-canvas" style="height:500px; margin-left:400px; border-right: 1px solid #666666; border-bottom: 1px solid #666666; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA;"></div>
+</body>
+</html>
