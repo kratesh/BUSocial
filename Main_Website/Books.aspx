@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Books.aspx.cs" Inherits="Books" %>
+
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -35,6 +37,12 @@
             document.getElementById("spreaddona").style.display = "block";
             document.getElementById("spreadrent").style.display = "none";
             document.getElementById("spreadbuy").style.display = "none";
+            document.getElementById("spreadform").style.display = "block";
+            document.getElementById("donate").style.display = "block";
+            document.getElementById("owner").style.display = "none";
+            document.getElementById("cost").style.display = "none";
+            document.getElementById("rent").style.display = "none";
+            document.getElementById("buy").style.display = "none";
             document.getElementById("spreadbook").scrollIntoView(true);
         }
         function tryshowrent() {
@@ -42,6 +50,12 @@
             document.getElementById("spreaddona").style.display = "none";
             document.getElementById("spreadrent").style.display = "block";
             document.getElementById("spreadbuy").style.display = "none";
+            document.getElementById("spreadform").style.display = "block";
+            document.getElementById("donate").style.display = "none";
+            document.getElementById("owner").style.display = "block";
+            document.getElementById("cost").style.display = "block";
+            document.getElementById("rent").style.display = "block";
+            document.getElementById("buy").style.display = "none";
             document.getElementById("spreadbook").scrollIntoView(true);
         }
         function tryshowbuy() {
@@ -49,6 +63,12 @@
             document.getElementById("spreaddona").style.display = "none";
             document.getElementById("spreadrent").style.display = "none";
             document.getElementById("spreadbuy").style.display = "block";
+            document.getElementById("spreadform").style.display = "block";
+            document.getElementById("donate").style.display = "none";
+            document.getElementById("owner").style.display = "block";
+            document.getElementById("cost").style.display = "block";
+            document.getElementById("rent").style.display = "none";
+            document.getElementById("buy").style.display = "block";
             document.getElementById("spreadbook").scrollIntoView(true);
         }
         function killall() {
@@ -56,6 +76,7 @@
             document.getElementById("spreaddona").style.display = "none";
             document.getElementById("spreadrent").style.display = "none";
             document.getElementById("spreadbuy").style.display = "none";
+            document.getElementById("spreadform").style.display = "none";
         }
     </script>
 
@@ -70,35 +91,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <a class="navbar-brand" href="index.html">BU Social!</a>
+                <a class="navbar-brand" href="#">Welcome!</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="index.html">BU Social</a>
+                    <li><a href="#">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="isso.html">ISSO</a>
+                    <li><a href="#">Services</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="shs.html">SHS</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="fitrec.html">FitRec</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="courses.html">Courses</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="books.html">Books</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="housing.html">Housing</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="lifeatbu.html">Life at BU</a>
+                    <li><a href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -108,7 +110,7 @@
     </nav>
 
     <!-- Jumbotron Header -->        
-            <header class="jumbotron hero-spacer" style="background-image: url('img/banner1.jpg')"/>
+            <header class="jumbotron hero-spacer" style="background-image: url('img/banner1.jpg')">
                 <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
@@ -123,7 +125,31 @@
     <!-- Page Content -->
     <div class="container">
         <hr />
-
+        <asp:SqlDataSource ID="Rentingbook" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" runat="server" SelectCommand="SELECT * FROM [Rent]"  InsertCommand="INSERT INTO Rent(books, owner, fee) VALUES (@Book, @Owner, @Cost)" DeleteCommand="DELETE FROM Rent WHERE (books = @Book)">
+            <InsertParameters>
+                <asp:ControlParameter ControlID="Book" Name="Book" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Owner" Name="Owner" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Cost" Name="Cost" PropertyName="Text" />
+            </InsertParameters>
+            <DeleteParameters>
+                <asp:ControlParameter ControlID="Book" Name="Book" PropertyName="Text" />
+            </DeleteParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="Buyingbook" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" runat="server" SelectCommand="SELECT * FROM [Buy]"  InsertCommand="INSERT INTO Buy(books, owner, cost) VALUES (@Book, @Owner, @Cost)" DeleteCommand="DELETE FROM Buy WHERE (books = @Book)">
+            <InsertParameters>
+                <asp:ControlParameter ControlID="Book" Name="Book" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Owner" Name="Owner" PropertyName="Text" />
+                <asp:ControlParameter ControlID="Cost" Name="Cost" PropertyName="Text" />
+            </InsertParameters>
+            <DeleteParameters>
+                <asp:ControlParameter ControlID="Book" Name="Book" PropertyName="Text" />
+            </DeleteParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="Donations" ConnectionString="<%$ ConnectionStrings:ConnectionString3 %>" runat="server" SelectCommand="SELECT * FROM [Donate]"  InsertCommand="INSERT INTO Donate(books) VALUES (@Book)">
+            <InsertParameters>
+                <asp:ControlParameter ControlID="Book" Name="Book" PropertyName="Text" />
+            </InsertParameters>
+        </asp:SqlDataSource>
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
@@ -557,96 +583,137 @@
                         </tr>
                     </table>
                 </div>
-                <hr />
-                <p style="text-align:center">
-                    <a href="#top">back to top</a>
-                    <br />
-                    <a href="#top" onclick = "killall()">close</a>
-                </p>
             </div>
         </div>
         
         <div>
             <div id="spreaddona" style="display: none">
-                <div class="row text-center">
-                    <h1>
-                        There's not any donation here!
-                    </h1>
-                </div>
-                <div class="row text-center">
-                    <a href="#" class="btn btn-default">Make a donation!</a>
-                </div>
-                <hr />
-                <p style="text-align:center">
-                    <a href="#top">back to top</a>
-                    <br />
-                    <a href="#top" onclick = "killall()">close</a>
-                </p>
+                <asp:Panel ID="auth" runat="server">
+                    <asp:Panel ID="No" class="row text-center" runat="server">
+                        <h1>
+                            There's not any donation here!   
+                        </h1>
+                    </asp:Panel>
+                    <asp:Panel id="Yes" class="row text-center" runat="server">
+                        <asp:Table ID="Donate" runat="server">
+                            <asp:TableRow>
+                                <asp:TableCell style="text-align:center">
+                                    <h4>
+                                        Books
+                                    </h4>
+                                </asp:TableCell>
+                            </asp:TableRow>
+                        </asp:Table>
+                    </asp:Panel>
+                </asp:Panel>
+                <asp:Panel ID="notauth" runat="server">
+                    <div class="row text-center">
+                        <h1>
+                            Login First!
+                        </h1>
+                    </div>
+                </asp:Panel>
             </div>
         </div>
         
         <div>
             <div id="spreadrent", style="display:none">
                 <div class="row text-center">
-                    <table style="text-align:center">
-                        <tr>
-                            <th style="text-align:center"><h4>Book</h4></th>
-                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                            <th style="text-align:center"><h4>Owner</h4></th>
-                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                            <th style="text-align:center"><h4>Rent fee</h4></th>
-                        </tr>
-                        <tr>
-                            <td><b>Probability, Random Variables, and Stochastic Processes</b>, A. Papoulis, McGraw-Hill</td>
-                            <td></td>
-                            <td><a href=#>Dongyang Zhang</a></td>
-                            <td></td>
-                            <td>$0.00</td>
-                        </tr>
-                        <tr>
-                            <td><b>All the Mathematics You Missed- But need to Know for Grad School</b>, Thomas A. Garrity, Cambridge University Press, 2001- </td>
-                            <td></td>
-                            <td><a href="#">Dongyang Zhang</a></td>
-                            <td></td>
-                            <td>$0.00</td>
-                    </table>
+                    <asp:Table ID="Renting" runat="server">
+                        <asp:TableRow>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    Books
+                                </h4>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                &nbsp&nbsp
+                            </asp:TableCell>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    Owner
+                                </h4>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                &nbsp&nbsp
+                            </asp:TableCell>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    Rent fee
+                                </h4>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
                 </div>
-                <hr />
-                <p style="text-align:center">
-                    <a href="#top">back to top</a>
-                    <br />
-                    <a href="#top" onclick = "killall()">close</a>
-                </p>
             </div>
         </div>
 
         <div>
             <div id="spreadbuy", style="display:none">
                 <div class="row text-center">
-                    <table style="text-align:center">
-                        <tr>
-                            <th style="text-align:center"><h4>Book</h4></th>
-                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                            <th style="text-align:center"><h4>Owner</h4></th>
-                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                            <th style="text-align:center"><h4>Cost</h4></th>
-                        </tr>
-                        <tr>
-                            <td><b>Probability, Random Variables, and Stochastic Processes</b>, A. Papoulis, McGraw-Hill</td>
-                            <td></td>
-                            <td><a href=#>Dongyang Zhang</a></td>
-                            <td></td>
-                            <td>$10.00</td>
-                        </tr>
-                        <tr>
-                            <td><b>All the Mathematics You Missed- But need to Know for Grad School</b>, Thomas A. Garrity, Cambridge University Press, 2001- </td>
-                            <td></td>
-                            <td><a href="#">Dongyang Zhang</a></td>
-                            <td></td>
-                            <td>$15.00</td>
-                        </tr>
-                    </table>
+                    <asp:Table ID="Buying" runat="server">
+                        <asp:TableRow>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    Books
+                                </h4>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                &nbsp&nbsp
+                            </asp:TableCell>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    Owner
+                                </h4>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                &nbsp&nbsp
+                            </asp:TableCell>
+                            <asp:TableCell style="text-align:center">
+                                <h4>
+                                    cost
+                                </h4>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
                 </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div id="spreadform" class="text-center" style="display: none">
+                <hr />
+                <form runat="server">
+                    Book&nbsp;name:
+                    <asp:TextBox ID="Book" runat="server"></asp:TextBox>
+                    <br />
+                    <br />
+                    <div id="owner">
+                        Owner:
+                        <asp:TextBox ID="Owner" runat="server"></asp:TextBox>
+                        <br />
+                        <br />
+                    </div>
+                    <div id="cost">
+                        Fee:
+                        <asp:TextBox ID="Cost" runat="server"></asp:TextBox>
+                        <br />
+                        <br />
+                    </div>
+                    <div id="donate" style="display: none">
+                        <asp:Button ID="Donating" runat="server" OnClick="Donating_Click" Text="Donate!" />
+                    </div>
+                    <div id="rent" style="display: none">
+                        <asp:Button ID="AddRent" runat="server" OnClick="AddRent_Click" Text="Add books!" />
+                        <asp:Button ID="DeleteRent" runat="server" OnClick="DeleteRent_Click" Text="Delete books!" />
+                    </div>
+                    <div id="buy" style="display: none">
+                        <asp:Button ID="AddBuy" runat="server" OnClick="AddBuy_Click" Text="Add books!" />
+                        <asp:Button ID="DeleteBuy" runat="server" OnClick="DeleteBuy_Click" Text="Delete books!" />
+                    </div>
+                    <br />
+                </form>
                 <hr />
                 <p style="text-align:center">
                     <a href="#top">back to top</a>
@@ -660,7 +727,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p style="text-align: center">
-                        <a href="index.html">BU Social</a>
+                        <a href="index.aspx">BU Social</a>
                     </p>
                     <p style="text-align: center">Copyright &copy; BUSocial 2015</p>
                 </div>

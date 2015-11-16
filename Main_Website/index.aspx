@@ -19,6 +19,9 @@
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
+    
+    <link rel="stylesheet" type="text/css" href="css/more_info.css" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,7 +33,7 @@
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="width: 1940px;">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -81,9 +84,14 @@
                     <li>
                         <a class="page-scroll" href="#lifeatbu">Life at BU</a>
                     </li>
-                    <li>
-                        <a href="#openModal_Login" class="btn btn-default">Login Now!</a>
-                    </li>
+                    <asp:Panel ID="Logined" runat="server">
+                        <asp:Label ID="stats" runat="server" Text=""></asp:Label>
+                    </asp:Panel>
+                    <asp:Panel ID ="Before" runat="server">
+                        <li>
+                            <a href="#openModal_Login" class="btn btn-default">Login Now!</a>
+                        </li>
+                    </asp:Panel>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -94,7 +102,6 @@
         <div class="dialog">
             <a href="#close" title="Close" class="close">X</a>
                     <form runat="server">
-                        <asp:Panel ID ="Before" runat="server">
                             LoginID:
                             <asp:TextBox ID="ID" runat="server" Width="80px"></asp:TextBox>
                             <asp:Panel ID ="LoginPanel" runat="server">
@@ -111,15 +118,11 @@
                                 <asp:TextBox ID="RPW2" runat="server" Width="80px" TextMode="Password"></asp:TextBox>
                                 <asp:Button ID="TryRegister" runat="server" OnClick="Register_Click" Text="Register" />
                             </asp:Panel>
-                        </asp:Panel>
-                        <asp:Panel ID="Logined" runat="server">
-                            <asp:Label ID="stats" runat="server" Text=""></asp:Label>
-                        </asp:Panel>
                     </form>
 	    </div>
     </div>
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -131,11 +134,11 @@
     
 
  <!-- ISSO Section -->
-    <section id="isso" class="cd-fixed-bg isso-section">
+    <section id="isso" class="cd-fixed-bg isso-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="issod">
+                    <div class="featurette" id="issod" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/isso_logo.jpg">
                       <h2 class="featurette-heading">International Students & Scholars Office <br> </h2>
@@ -150,11 +153,11 @@
     </section>
     
     <!-- SHS Section -->
-    <section id="shs" class="cd-fixed-bg shs-section">
+    <section id="shs" class="cd-fixed-bg shs-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="shsd">
+                    <div class="featurette" id="shsd" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img/shs_logo.jpg">
                         <h2 class="featurette-heading">Student Health Services <br> </h2>
@@ -169,11 +172,11 @@
     </section>
 
     <!-- FitRec Section -->
-    <section id="fitrec" class="cd-fixed-bg fitrec-section">
+    <section id="fitrec" class="cd-fixed-bg fitrec-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="fitrecd">
+                    <div class="featurette" id="fitrecd" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/fitrec_logo.jpg">
                       
@@ -189,11 +192,11 @@
     </section>
     
     <!-- Courses Section -->
-    <section id="courses" class="cd-fixed-bg courses-section">
+    <section id="courses" class="cd-fixed-bg courses-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="coursesd">
+                    <div class="featurette" id="coursesd" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img\courses_logo.jpg">
                       
@@ -209,18 +212,18 @@
     </section>
 
     <!-- Books Section -->
-    <section id="books" class="cd-fixed-bg books-section">
+    <section id="books" class="cd-fixed-bg books-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="booksd">
+                    <div class="featurette" id="booksd" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/books_logo.jpg">
                         <h2 class="featurette-heading">Books <br> </h2>
                         <h3>    <span class="text-muted">The book you don’t read won’t help.</span>
                         </h3>
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        <a href="books.html" class="btn btn-default">More Info</a>
+                        <a href="books.aspx" class="btn btn-default">More Info</a>
                     </div>
                 </div>
             </div>
@@ -228,11 +231,11 @@
     </section>
     
     <!-- Housing Section -->
-    <section id="housing" class="housing-section">
+    <section id="housing" class="housing-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="housingd">
+                    <div class="featurette" id="housingd" style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-left" src="img/housing_logo.jpg">
                         <h2 class="featurette-heading">Housing<br> </h2>
@@ -247,11 +250,11 @@
     </section>
     
     <!-- Life at BU Section -->
-    <section id="lifeatbu" class="cd-fixed-bg lifeatbu-section">
+    <section id="lifeatbu" class="cd-fixed-bg lifeatbu-section" style="height: 1000px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="featurette" id="lifeatbud">
+                    <div class="featurette" id="lifeatbud"  style="width: 1140px;">
                         <br><br><br>
                       <img class="featurette-image img-circle img-responsive pull-right" src="img/life_logo.jpg">
                         <h2 class="featurette-heading">Life at BU<br> </h2>
