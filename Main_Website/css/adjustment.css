@@ -1,0 +1,12 @@
+/**max width 980px**/
+@media screen and (max-width:1200px) {
+ .wrap {
+ width:980px;
+ }
+}
+/**max1280px screen***/
+@media screen and (min-width:1200px) {
+ .wrap {
+ width:1200px;
+ }
+}

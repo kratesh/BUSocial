@@ -118,7 +118,7 @@
     </script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -128,19 +128,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Welcome!</a>
+                <a class="navbar-brand" href="index.html">BU Social!</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="index.html">BU Social</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a class="page-scroll" href="isso.html">ISSO</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a class="page-scroll" href="shs.html">SHS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="fitrec.html">FitRec</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="books.html">Books</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="housing.html">Housing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="lifeatbu.html">Life at BU</a>
                     </li>
                 </ul>
             </div>
@@ -197,7 +213,7 @@
                     <img src="img/climbing.jpg" alt="" />
                     <div class="caption">
                         <h3>Membership Options</h3>
-                        <p>Join us and start your journey now!</p>
+                        <p>Join us and start your journey now!</p></br>
                         <p>
                             <a class="btn btn-default" onclick="tryshowMem()">More Info</a>
                         </p>
@@ -222,10 +238,10 @@
 <!--1st row, 4th  FAMILY PROGRAMS -->
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="img/family.png" alt="" />
+                    <img src="img/family.png" alt="" height="83%" />
                     <div class="caption">
                         <h3>Family Programs</h3>
-                        <p>Check out our many family programs available!</p><br />
+                        <p>Check out our many family programs available!</p>
                         <p>
                             <a class="btn btn-default" onclick="tryshowFamily()">More Info</a>
                         </p>
@@ -239,10 +255,10 @@
 <!--2nd row, 1st element RESERVATIONS -->
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="img/event.jpg" alt="" width = "60%" height = "60%"/>
+                    <img src="img/event.jpg" alt=""/>
                     <div class="caption">
                         <h3>Reservations</h3>
-                        <p>Reserve your special events here!</p>
+                        <p>Reserve your special events here!</p></br>
                         <p>
                             <a class="btn btn-default" onclick="tryshowReservations()">More Info</a>
                         </p>
