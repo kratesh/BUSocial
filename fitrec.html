@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FitRec</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <script type="text/javascript">          //javascript functions
+        function tryshowFacilities() {
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "block";
+            document.getElementById("spreadFacilities").scrollIntoView(true);
+        }
+        function tryshowMem() {
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+            document.getElementById("spreadMem").style.display = "block";
+            document.getElementById("spreadMem").scrollIntoView(true);
+        }
+        function tryshowOptions() {
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "block";
+            document.getElementById("spreadOptions").scrollIntoView(true);
+        }
+        function tryshowFamily() {
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "block";
+            document.getElementById("spreadFamily").scrollIntoView(true);
+        }
+        function tryshowReservations() {
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "block";
+            document.getElementById("spreadReservations").scrollIntoView(true);
+        }
+        function tryshowTraining() {
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "block";
+            document.getElementById("spreadTraining").scrollIntoView(true);
+        }
+        function killall() {
+            document.getElementById("spreadFacilities").style.display = "none";
+            document.getElementById("spreadMem").style.display = "none";
+            document.getElementById("spreadOptions").style.display = "none";
+            document.getElementById("spreadFamily").style.display = "none";
+            document.getElementById("spreadReservations").style.display = "none";
+            document.getElementById("spreadTraining").style.display = "none";
+        }
+        function showlocation() {
+            document.getElementById("location").style.display = "block";
+            document.getElementById("map").style.display = "none";
+            document.getElementById("features").style.display = "none";
+        }
+        function showmap() {
+            document.getElementById("location").style.display = "none";
+            document.getElementById("map").style.display = "block";
+            document.getElementById("features").style.display = "none";
+        }
+        function showfeatures() {
+            document.getElementById("location").style.display = "none";
+            document.getElementById("map").style.display = "none";
+            document.getElementById("features").style.display = "block";
+        }
+        function showgroup() {
+            document.getElementById("group").style.display = "block";
+            document.getElementById("pilates").style.display = "none";
+            document.getElementById("yoga").style.display = "none";
+        }
+        function showpilates() {
+            document.getElementById("group").style.display = "none";
+            document.getElementById("pilates").style.display = "block";
+            document.getElementById("yoga").style.display = "none";
+        }
+        function showyoga() {
+            document.getElementById("group").style.display = "none";
+            document.getElementById("pilates").style.display = "none";
+            document.getElementById("yoga").style.display = "block";
+        }
+    </script>
+
+    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.aspx">BU Social!</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="index.aspx">BU Social</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="isso.html">ISSO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="shs.html">SHS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="fitrec.html">FitRec</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="books.aspx">Books</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="housing.html">Housing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="lifeatbu.html">Life at BU</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="direction2.html">Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="event.aspx">Event</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Jumbotron Header -->
+            <header class="jumbotron hero-spacer" style="background-image: url('img/banner1.jpg')"/>
+                <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Fitness and Recreation Center!</h1>
+                        <h3>Helping you live a <u><b>HAPPY</b></u> and <u><b>HEALTHY</b></u> lifestyle</h3>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <hr />
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Quicklinks</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+<!-- Quicklinks -->
+        <div class="row text-center">
+<!--1st row -->
+<!--1st row, 1st element FACILITIES -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/building.jpg" alt=""/>
+                    <div class="caption">
+                        <h3>Facilities</h3>
+                        <p>Check out the facilities and hours of operation!</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowFacilities()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+<!--1st row, 2nd element  MEMBERSHIP OPTIONS  -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/climbing.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Membership Options</h3>
+                        <p>Join us and start your journey now!</p></br>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowMem()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+<!--1st row, 3rd element FITNESS OPTIONS -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/running.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Fitness Options</h3>
+                        <p>Explore the various ways you can get and stay in great shape!</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowOptions()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+<!--1st row, 4th  FAMILY PROGRAMS -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/family.png" alt="" height="83%" />
+                    <div class="caption">
+                        <h3>Family Programs</h3>
+                        <p>Check out our many family programs available!</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowFamily()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- / 1st row -->
+        <div class="row text-center">
+<!--2nd row -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+            </div>
+<!--2nd row, 1st element RESERVATIONS -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/event.jpg" alt=""/>
+                    <div class="caption">
+                        <h3>Reservations</h3>
+                        <p>Reserve your special events here!</p></br>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowReservations()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+<!--2nd row, 2nd element  PERSONAL TRAINING  -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/facilities.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Personal Training</h3>
+                        <p>Enjoy the benefits of one on one training!</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowTraining()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+<!-- /2nd row -->
+<!--/QUICKLINKS -->
+        <hr />
+<!--SPREADS -->
+        <div>
+<!--FACILITES SPREAD -->
+            <div id="spreadFacilities" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showlocation()">Location</a>
+                        <a class="btn btn-default" onclick="showmap()">Facilities Map</a>
+                        <a class="btn btn-default" onclick="showfeatures()">Features</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="location">
+                    <h2 style="text-align: center">Location</h2>
+                    <img src = "img/map.png" class="img-rounded" alt = "" height="60%" width="60%"></img>
+                    <p><b> 915 Commonwealth Avenue <br> Boston, MA <br> 02215</b> </p>
+
+                        <h3>FitRec Parking</h3>
+                        <p>Parking at FitRec is very limited. Members are encouraged to use public transportation whenever possible. <br>
+                          Garage parking is available adjacent to FitRec in the Agganis Arena Parking Garage (Lot A).
+                          Alternate parking <br>is also available at 808 Commonwealth Avenue and in the Langsam garage. <br> <br>
+                          <b>Please Note:</b> Between 6 p.m. and 11 p.m. on non-event days, Agganis Arena parking patrons are asked to pay <br> the maximum
+                          rate UPON ENTRY. Upon leaving, you will be refunded for any unused parking hours. <br>More specifically,
+                          when parking patrons enter the Agganis Arena lot between: </p>
+                          <ul>
+                            <li> 6 p.m. and 7 p.m.: they are asked to pay $10.00 </li>
+                            <li> 7 p.m. and 8 p.m.: $8.00 </li>
+                            <li> 8 p.m. and 9 p.m.: $6.00 </li>
+                            <li> 9 p.m. and 10 p.m.: $4.00 </li>
+                            <li> After 10 p.m.: $2.00 </li>
+                          </ul>
+                          <p> Again, patrons will be refunded any unused parking fees. </p>
+
+                    <h4>Permit Parking</h4>
+                    <p> On non-event dates, Lot A will be available to BU employees with valid Green and Red permits or with
+                      Medical <br> Campus daytime permits (Gold Stickers), on a space-available basis. Evening permits for the Charles
+                      River <br> Campus and the Medical Campus will both be honored after 4 pm. </p>
+                    <h4> Non-Permit Parking </h4>
+                    <p> On non-event dates, the Agganis Arena parking garage (Lot A) will be available to
+                      Fitness & Recreation Center <br> members and visitors for $2/hr or a maximum of $12/day. </p>
+                      <br>
+                </div>
+
+                <div id="map" style="display: none">
+                    <h2 style="text-align: center">Facilities Map</h2>
+                    <embed src="map.pdf" width="900" height="700" type='application/pdf'>
+                </div>
+
+                <div id="features" style="display: none">
+                    <h2 style="text-align: center">Features</h2>
+                    <h4>Included in Membership</h4>
+                    <ul>
+                      <li>Pool Hours</li>
+                      <li>Climbing Wall Hours</li>
+                      <li>Squash & Racquetball Hours</li>
+                      <li>Track & Tennis Center Hours</li>
+                      <li>3 Court Gym Hours</li>
+                      <li>Open Skating at Walter Brown Arena</li>
+                      <li>Sailing Pavilion Hours</li>
+                    </ul>
+                    <h4>Fitness Equipment</h4>
+                    <ul>
+                      <li>35 Presco Treadmils</li>
+                      <li>55 Presco Elleptical Crosstrainers</li>
+                      <li>14 Presco AMT's (Adaptive Motion Trainers)</li>
+                      <li>5 Octane Lsteral Ellepticals</li>
+                      <li>5 Cyber Arc Trainers</li>
+                      <li>4 Assault Air Dyne Bikes</li>
+                      <li>9 Concept Rowers</li>
+                      <li>2 Spin Sport Bikes</li>
+                      <li>4 Concept II Bikes</li>
+                      <li>1 Scifit Pro II Bike</li>
+                      <li>5 Stairmaster Stepmills</li>
+                    </ul>
+                </div>
+
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+              </div>
+<!--/FACILITES SPREAD -->
+<!--MEMBERSHIP OPTIONS SPREAD -->
+            <div id="spreadMem" style="display: none">
+              <h2 style="text-align: center">Membership Options</h2>
+              <h3>Students<h3>
+                <h5>Full-Time Students -- $0/<small>month</small></h5>
+                <h5>Part-Time Students</h5>
+                  <ul>
+                    <li>Under 18 -- $8.95/<small>month</small></li>
+                    <li>18+ -- $24.95/<small>month</small></li>
+                  </ul>
+              <h3>Faculty</h3>
+                <ul>
+                 <li>Under 18 -- $8.95/<small>month</small></li>
+                 <li>18+ -- $46.95/<small>month</small></li>
+                 <li>Spouse -- $35.95/<small>month</small></li>
+                </ul>
+              <h3>Alumni</h3>
+                <ul>
+                 <li>Under 18 -- $8.95/<small>month</small></li>
+                 <li>18+ -- $63.95/<small>month</small></li>
+                 <li>Spouse -- $46.95/<small>month</small></li>
+                </ul>
+
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+<!-- /MEMBERSHIP OPTIONS SPREAD -->
+<!-- FITNESS OPTIONS SPREAD -->
+            <div id="spreadOptions" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showgroup()">Group Excercises</a>
+                        <a class="btn btn-default" onclick="showpilates()">Pilates</a>
+                        <a class="btn btn-default" onclick="showyoga()">Yoga</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="group">
+                    <h2 style="text-align: center">Group Excersises</h2>
+                    <h4>Your membership includes:</h4>
+                    <ul>
+                      <li>Cardios</li>
+                      <li>Zumba</li>
+                      <li>Beach Body Workout</li>
+                      <li>Aerobics Class</li>
+                      <li>Cycling</li>
+                      <li>Ball Training</li>
+                    </ul>
+                    <br>
+                    <p style="text-align: center"><b>Please note:</b> Other classes offered change on weekly basis </p>
+                    <br>
+
+
+                </div>
+
+                <div id="pilates" style="display: none">
+                    <h2 style="text-align: center">Pilates</h2>
+                    <p>Your membership includes classes on the mat.</p>
+                    <p>
+                        Pilates help improve flexibility, strength, allignment, muscle tone, etc.
+                    </p>
+                    <ul>
+                        <li>Group classes also offered</li>
+                        <li>Mind and Body workout</li>
+                    </ul>
+                </div>
+
+                <div id="yoga" style="display: none">
+                    <h2 style="text-align: center">Yoga</h2>
+                    <p style="text-align: center">Yoga has been proven to be an excellent stress reducer and a wonderful exercise for mind, body, and soul.<br>
+                      A regular yoga practice helps to increase blood flow throughout the body, improve flexibility and muscle strength,
+                      and help with balance and overall body awareness, <br>all while boosting your mood! Come find your deep stretch in
+                      a yoga class.</p>
+                      <br>
+                    <p style="text-align: center"> This fall semester, FitRec will be offering an Unlimited Yoga Pass.
+                      This pass will give access to every yoga class offered at FitRec!
+                      For $100/ $115 FitRec members and nonmembers can choose from a variety of classes including: </p>
+                    <p style="text-align: center">
+                      Fundamentals<br>
+                      Hatha<br>
+                      Power<br>
+                      Vinyasa Flow<br>
+                      Deep Stretch<br>
+                      Yoga/Pilates Fusion<br>
+                      Yoga and Meditation!<br>
+                </div>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+<!-- /FITNESS OPTIONS SPREAD -->
+<!-- FAMILY PROGRAMS SPREAD -->
+            <div id="spreadFamily" style="display: none">
+                <h2 style="text-align: center">Family Programs</h2>
+                <p style="text-align: center">Family Programs Available: </p>
+                <p style="text-align: center">
+                Aquatics<br>
+                Rock Climbing<br>
+                Court Sports<br>
+                Dance<br>
+                Gymnastics<br>
+                Birthday Parties<br>
+                Private Lessons<br>
+                Swim Lessons<br>
+                Skating<br>
+                Rock Climbing Lessons<br>
+                Court Sports Lessons<br>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+<!-- /FAMILY PROGRAMS SPREAD -->
+<!--RESERVATIONS SPREAD -->
+            <div id="spreadReservations" style="display: none">
+                <h2 style="text-align: center">Reservations</h2>
+                <p style="text-align: center">Reservations Available: </p>
+                <p style="text-align: center">
+                Court<br>
+                Dance Theatre<br>
+                Birthday Party<br>
+                Classrooms<br>
+                Climbing Wall<br>
+                Gymnasia<br>
+                Pools<br>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+<!--/RESERVATIONS SPREAD -->
+<!--PERSONAL TRAINING -->
+            <div id="spreadTraining" style="display: none">
+              <h2 style="text-align: center">Personal Training</h2>
+              <h3>Fitness Evaluation & Initial Training Session</h3>
+                  <ul>
+                    <li>Member -- $130</li>
+                    <li>Non-Member -- $140</li>
+                  </ul>
+              <h3>Fitness Evaluation</h3>
+                <ul>
+                 <li>Member -- $60</li>
+                 <li>Non-Member -- $70</li>
+                </ul>
+              <h3>Body Composition Analysis</h3>
+                <ul>
+                  <li>Member -- $20</li>
+                  <li>Non-Member -- $30</li>
+                </ul>
+              <h3>Personal Training</h3>
+                <h5>Individual</h5>
+                <ul>
+                  <li>Member -- $65</li>
+                  <li>Non-Member -- $75</li>
+                </ul>
+                <h5>Semi-Private</h5>
+                <ul>
+                  <li>Member -- $60</li>
+                  <li>Non-Member -- $70</li>
+                </ul>
+
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+<!--/PERSONAL TRAINING -->
+        </div>
+<!--/SPREADS -->
+        <hr>
+<!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="text-align: center">
+                        <a href="index.aspx">BU Social</a>
+                    </p>
+                    <p style="text-align: center">Copyright &copy; BUSocial 2015</p>
+                </div>
+            </div>
+        </footer>    </div>
+
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

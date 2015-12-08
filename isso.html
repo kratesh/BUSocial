@@ -1,0 +1,950 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ISSO Helping</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <script type="text/javascript">          //javascript functions
+        function tryshownew() {
+            document.getElementById("spreadimmi").style.display = "none";
+            document.getElementById("spreadwork").style.display = "none";
+            document.getElementById("spreadtravel").style.display = "none";
+            document.getElementById("spreadnew").style.display = "block";
+            document.getElementById("spreadnew").scrollIntoView(true);
+        }
+        function tryshowimmi() {
+            document.getElementById("spreadwork").style.display = "none";
+            document.getElementById("spreadtravel").style.display = "none";
+            document.getElementById("spreadnew").style.display = "none";
+            document.getElementById("spreadimmi").style.display = "block";
+            document.getElementById("spreadimmi").scrollIntoView(true);
+        }
+        function tryshowwork() {
+            document.getElementById("spreadimmi").style.display = "none";
+            document.getElementById("spreadtravel").style.display = "none";
+            document.getElementById("spreadnew").style.display = "none";
+            document.getElementById("spreadwork").style.display = "block";
+            document.getElementById("spreadwork").scrollIntoView(true);
+        }
+        function tryshowtravel() {
+            document.getElementById("spreadimmi").style.display = "none";
+            document.getElementById("spreadwork").style.display = "none";
+            document.getElementById("spreadnew").style.display = "none";
+            document.getElementById("spreadtravel").style.display = "block";
+            document.getElementById("spreadtravel").scrollIntoView(true);
+        }
+        function killall() {
+            document.getElementById("spreadnew").style.display = "none";
+            document.getElementById("spreadimmi").style.display = "none";
+            document.getElementById("spreadwork").style.display = "none";
+            document.getElementById("spreadtravel").style.display = "none";
+        }
+        function showdoc() {
+            document.getElementById("doc").style.display = "block";
+            document.getElementById("che").style.display = "none";
+            document.getElementById("ori").style.display = "none";
+        }
+        function showche() {
+            document.getElementById("doc").style.display = "none";
+            document.getElementById("che").style.display = "block";
+            document.getElementById("ori").style.display = "none";
+        }
+        function showori() {
+            document.getElementById("doc").style.display = "none";
+            document.getElementById("che").style.display = "none";
+            document.getElementById("ori").style.display = "block";
+        }
+        function showisc() {
+            document.getElementById("isc").style.display = "block";
+            document.getElementById("imd").style.display = "none";
+            document.getElementById("sta").style.display = "none";
+        }
+        function showimd() {
+            document.getElementById("isc").style.display = "none";
+            document.getElementById("imd").style.display = "block";
+            document.getElementById("sta").style.display = "none";
+        }
+        function showsta() {
+            document.getElementById("isc").style.display = "none";
+            document.getElementById("imd").style.display = "none";
+            document.getElementById("sta").style.display = "block";
+        }
+        function showssn() {
+            document.getElementById("ssn").style.display = "block";
+            document.getElementById("emp").style.display = "none";
+            document.getElementById("wor").style.display = "none";
+        }
+        function showemp() {
+            document.getElementById("ssn").style.display = "none";
+            document.getElementById("emp").style.display = "block";
+            document.getElementById("wor").style.display = "none";
+        }
+        function showwor() {
+            document.getElementById("ssn").style.display = "none";
+            document.getElementById("emp").style.display = "none";
+            document.getElementById("wor").style.display = "block";
+        }
+        function showvis() {
+            document.getElementById("vis").style.display = "block";
+            document.getElementById("ent").style.display = "none";
+            document.getElementById("tra").style.display = "none";
+        }
+        function showent() {
+            document.getElementById("vis").style.display = "none";
+            document.getElementById("ent").style.display = "block";
+            document.getElementById("tra").style.display = "none";
+        }
+        function showtra() {
+            document.getElementById("vis").style.display = "none";
+            document.getElementById("ent").style.display = "none";
+            document.getElementById("tra").style.display = "block";
+        }
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.aspx">BU Social!</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="index.aspx">BU Social</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="isso.html">ISSO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="shs.html">SHS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="fitrec.html">FitRec</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="books.aspx">Books</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="housing.html">Housing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="lifeatbu.html">Life at BU</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="direction2.html">Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="event.aspx">Event</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Jumbotron Header -->        
+            <header class="jumbotron hero-spacer" style="background-image: url('img/banner1.jpg')"/>
+                <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>ISSO Helping!</h1>
+                        <h3>Making you feel like in your home country!</h3>
+                        <br/>
+                    </div>
+                </div>
+            </div>            
+        </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <hr />
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Quicklinks</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+            <!--1st row, 1st element EMERGENCY -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/student.jpg" alt=""/>
+                    <div class="caption">
+                        <h3>New students</h3>
+                        <p>Documents need to be submitted, verification, and orientation.</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshownew()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--1st row, 2nd element  HELP INFO -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/immigration.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Immigration</h3>
+                        <p>Classification, documents, and maintaining status</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowimmi()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--1st row, 3rd element LOCATION & CONTACT -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/work.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Work and intern</h3>
+                        <p>SSN, on-campus and off-campus employment.</p>
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowwork()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--1st row, 4th  HEALTH REQUIREMENTS -->
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/visa.jpg" alt="" />
+                    <div class="caption">
+                        <h3>Travel and visas</h3>
+                        <p>VISA, entering US and traveling.</p><br />
+                        <p>
+                            <a class="btn btn-default" onclick="tryshowtravel()">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr />
+        <div>
+            <div id="spreadnew" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showdoc()">Document & Procedures</a>
+                        <a class="btn btn-default" onclick="showche()">Check-in</a>
+                        <a class="btn btn-default" onclick="showori()">Orientation</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="doc">
+                    <h1 style="text-align: center">Document & Procedures</h1>
+                    <p>Once you have been admitted as a graduate or non-degree student, the ISSO needs to process certain documentation to finalize your arrangement with BU.Afterhave submitted the required academic information and documentation to the Graduate Admissions office in your school or college, your Admissions office will work with you to gather the additional documentation necessary to obtain your immigration document from the ISSO.
+                        <h2>Documents to submit</h2>
+                        <ul>
+                            <li>Your completed <a title="ISSO - International Student Data Form" href="http://www.bu.edu/isso/files/2014/08/Fillable-ISDF-version-12-2014.pdf" target="_blank">International Student Data Form (ISDF)</a> or your International Applicant Coversheet. Fill out the following information completely and accurately:
+                            <ul>
+                                 <li>Enter your name exactly as it appears in your passport, even though you may have more than one way of spelling your name (especially in English).</li>
+                                 <li>Enter your date of birth in the American format: month, day, and year (MM/DD/YYYY). For example, May 12, 1978, should be written 05/12/1978.</li>
+                                 <li>Answer every question.</li>
+                                 <li>Sign and date the form.</li>
+                            </ul>
+                            </li>
+                            <li>A copy of the biographical page of your passport</li>
+                            <li>Copies of all of your immigration documents if you are currently in the U.S.</li>
+                            <li><a href="http://www.bu.edu/isso/getting-started/documents-procedures/requiredfinancialdocumentation/">Required financial documentation</a> demonstrating your ability to pay for your expenses at Boston University</li>
+                            <li>Official TOEFL/IELTS score reports (if applicable)</li>
+                        </ul>
+                    <h2>After Processing</h2>
+                    <ul>
+                    <li>If you are currently outside the U.S., your immigration document will be sent to you once it is processed. You will then need to apply for the appropriate visa classification at a U.S. Embassy or Consulate. If you are in the U.S., you can pick-up your new document when you check-in at the ISSO.</li>
+                    <li>All international students and scholars must check-in with the ISSO upon arrival.  Please review our check-in information so that you know what documents to bring, what time slots are available or if you will need to make an appointment or a reservation and if you need to attend an orientation program.</li>
+                    </ul>
+                </div>
+
+                <div id="che" style="display: none">
+                    <h1 style="text-align: center">Check-in</h1>
+                    <p>All international students and scholars must check-in with the ISSO upon arrival. <strong>If you don't complete your initial check-in at the ISSO, you may jeopardize your legal status in U.S..</strong></p>
+                    <h3>Who Must Check In</h3>
+                    <p>You are considered an international student or scholar if you are not a U.S. Citizen or a U.S. Permanent Resident ("Green Card" holder).  You must report to the ISSO for check-in if you are:</p>
+                    <ul>
+                        <li>a new international student in any immigration status</li>
+                        <li>a continuing international student beginning a new program of study or returning from a leave of absence</li>
+                    </ul>
+                    <h3>When to Check In</h3>
+                    <ul>
+                    <li> Within 15 days of your program start date</li>
+                    <li> We will send you an email prior to the start of class with instructions on how to <a href="http://www.bu.edu/isso/check-in-reservation/">schedule a check-in reservation</a> in your initial term.</li>
+                    </ul>
+                    <h3>What to Bring</h3>
+                    <ul>
+                    <li>All relevant immigration documents (i.e. passport, Form I-20, Form DS-2019, etc.)</li>
+                    <li>Immigration documents for any spouse and/or child(ren) who have accompanied you to the U.S. in a dependent visa status such as F-2 or J-2</li>
+                    <li>Any documents issued to you upon your entry to the U.S.</li>
+                    </ul>
+                    <ul>
+                    <li>Any other immigration status related documents, if applicable (e.g. I-797 Approval Notice)</li>
+                    </ul>
+                    <h3>Where to Go</h3>
+                    <h4>Charles River Campus</h4>
+                    <p>
+                        International Students &amp; Scholars Office<br />
+                        888 Commonwealth Avenue, 2nd Floor<br />
+                        Boston, MA 02215</p>
+                    <p>
+                    <a href="https://www.google.com/maps/place/888+Commonwealth+Ave,+Brookline,+MA+02446/@42.3509217,-71.1169932,17z/data=!3m1!4b1!4m2!3m1!1s0x89e379ef30c03319:0x662049e767dd2d9f">ISSO Loccation</a></p>
+                </div>
+
+                <div id="ori" style="display: none">
+                    <h1 style="text-align: center">Orientation</h1>
+                    <p>
+                        ISSO office provides new students the opportunity to learn how to best transition to the U.S. and the BU community. These <strong>mandatory</strong> sessions feature an introduction to ISSO services and include critical visa and immigration information, as well as important tips on cultural adjustment, the American classroom, and health.
+                    </p>
+                    <h3>Undergraduate</h3>
+                    <p>
+                        ISSO's International Student Advising team participates in Boston University Orientation to offer a program tailored for international students.
+                    </p>
+                    <p>
+                        International freshman, MET International undergraduate students, and Exchange XRG students, are encouraged to register through the <a href="http://www.bu.edu/orientation" target="_blank">Orientation office</a>.
+                    </p>
+                    <h3>Graduate</h3>
+                    <p>The ISSO offers an orientation session to graduate degree students each semmester.</p>
+                    <p style="text-align: left; padding-left: 60px;"><em><strong><span style="color: #000000;">Fall 2015 ISSO INTERNATIONAL</span>
+                    </strong><br style="clear: both;" /><strong><span style="color: #000000;">GRADUATE STUDENT ORIENTATION</span></strong><br style="clear: both;" /><a href="http://www.bu.edu/isso/getting-started/orientation/" target="_blank">Orientation session time</a></p>
+                    <p style="padding-left: 60px;"><span style="color: #000000;"><a href="http://www.bu.edu/maps/index.php?id=1551" target="_blank">Orientation session location</a></span></p>
+                    <p style="padding-left: 60px;"><span style="color: #000000;"><a href="http://www.supersaas.com/schedule/buisso/ISSO_Orientation_Repeat_Session">reserve a space</a></span></p>
+                    <h3 id="j-1-exchange-visitors">J-1 Exchange Visitors (Categories: Professor, Research Scholar, Short-Term Scholar, Student Intern, Specialist)</h3>
+                    <p>All BU sponsored J-1 Scholars are required by U.S. Department of State regulations to report to the ISSO and attend a New Scholar Orientation upon arrival in the U.S.<o:p></o:p></p>
+                    <p>The ISSO offers two New J-1 Scholar Orientation/Check-in sessions weekly:<o:p></o:p></p>
+                    <table style="width: 100%;" border="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top" width="82">Tuesdays</td>
+                                <td valign="top" width="93">10:00 a.m.</td>
+                                <td valign="top" width="284"><strong>Charles River Campus, ISSO</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        888 Commonwealth Avenue, 2nd Floor<br />Boston, MA 02215Thursdays11:00 a.m.
+                        <strong>Medical Campus, </strong>
+                        <b>Human Resources office</b>
+                    </p>
+                    <p>Please bring:</p>
+                    <ul>
+                        <ul>
+                            <ul style="text-align: left;">
+                                <li>your immigration documents (Form DS-2019, passport and visa)</li>
+                                <li>immigration documents for any dependent family members in J-2 status (if applicable)</li>
+                                <li><a href="http://www-staging.bu.edu/isso/getting-started/medical/j-1-health-insurance/">J-1 Health Insurance verification forms</a></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                <br />
+                </div>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+            <div id="spreadimmi" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showisc()">Immigration Student Classifications</a>
+                        <a class="btn btn-default" onclick="showimd()">Immigration Document</a>
+                        <a class="btn btn-default" onclick="showsta()">Maintaining Status</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="isc">
+                    <h1 style="text-align: center">Immigration Student Classifications</h1>
+                    <h2>Student Classifications</h2>
+                    <p>
+                        <em>Students must be enrolled part-time or full-time in a degree or non-degree program, and the primary activity at BU is to study.</em>
+                    </p>
+                    <h3>F-1 Student Classification</h3>
+                    <p>
+                        Most international students at BU are here in this classification, as it is designed to facilitate study toward a specific educational objective. <a href="http://www.bu.edu/isso/immigration-status/immigration-overview/f-1-student-classification/">Click</a> for more information about F-1.
+                    </p>
+                    <h3>J-1 Student Classification</h3>
+                    <p>
+                        Students who receive qualifying financial sponsorship or who are participating in a formal university exchange program are in he J-1 category.<a href="http://www.bu.edu/isso/immigration-status/immigration-overview/j-1-student-classification/">Click</a> for more information about J-1.
+                    </p>
+                    <h3>Other Student Classifications</h3>
+                    <p>
+                        If you are currently in the US in another immigration classification, you may be eligible to enroll in either full-time or part-time coursework at BU. <a href="http://www.bu.edu/isso/immigration-status/immigration-overview/other-student-classifications/">Click</a> for more information.
+                    </p>
+                </div>
+
+                <div id="imd" style="display: none">
+                    <h1 style="text-align: center">Immigration Document</h1>
+                    <p>
+                        While you are studying or working in the U.S., you should keep your immigration documents safe and valid. It's also important that you understand the purpose of, and validity period for, each document.
+                    </p>
+                    <h2>Passport</h2>
+                    <p>
+                        Your passport is an important document issued by your country of citizenship and used to establish your identity. In any correspondence with ISSO and in your BU records and other applications, you should use the name as it appears on your passport. If the information in your passport is not accurate, you must correct it before any other immigration documents are changed.
+                    </p>
+                    <h3>Validity/Expiration</h3>
+                    <p>
+                        It's important to Maintain a valid passport which means you maintain your immigration status in the U.S. You'd better make sure that your passport will be valid for as long as possible into the future, but at the minimum, it should always be valid at least six months beyond any anticipated date(s) of entry to the US.
+                    </p>
+                    <h3>Renewal</h3>
+                    <p>
+                        If your passport is expiring while you are in the U.S., you will need to take the necessary steps to replace it in a timely manner. You can carry out this process in the U.S. by contacting one of your country's <a href="http://www.state.gov/s/cpr/rls/fco/">embassies or consulates</a>, or by returning home and renewing it there. Situation varies from country to country. In some cases, it may be as simple as a trip to your consulate in Boston, but in other cases it may be a more complicated and time-consuming process involving an embassy in Washington, DC, or a consulate in another city.
+                    </p>
+                    <h3>Corrections</h3>
+                    <p>
+                        The ISSO needs to use your name, as represented on your passport, on all of your immigration documents. If your passport name is not accurate, you must correct it before any other immigration documents are changed.
+                    </p>
+                    <h2>Visa</h2>
+                    <p>
+                        Your visa indicates whether you have permission to enter the U.S. in a certain immigration classification. You may have more than one valid visa in your passport, but you can only have <strong>one</strong> status while you are in the U.S. Therefore, your visa does <strong>not</strong> confirm your current classification or how long you can stay in the U.S.
+                    </p>
+                    <p>
+                        Once you are in the U.S., be sure to keep track of your visa's expiration date as it may not coincide with the dates on your other immigration documents. If you plan to travel outside the U.S., you will need a valid visa in order to re-enter. (You can think of your visa as you would a movie ticket: You need it to get into the movie theater, but once you are in the theater, you don't need it unless you exit for some popcorn or snacks. Then if you want to get back in the theater, you need to present that ticket again.)
+                    </p>
+                    <h3>Expiration and Renewal</h3>
+                    <p>
+                        If your visa expires when you're in the U.S., you don't need to take any action until the next time you depart the U.S. Then, in most cases, you'll need to obtain a new, valid visa to re-enter.
+                    </p>
+                    <p>
+                        You cannot renew an expired visa from within the U.S., so if you are leaving the US temporarily and your visa is expired, you must make arrangements to obtain a new visa at a U.S. consulate or embassy outside the U.S. Visit our <a href="http://www.bu.edu/isso/travel-visas/">Travel and Visas</a> section for more information.
+                    </p>
+                    <p>
+                        Some limited travel abroad may be possible with an expired visa. Please review the information on <a href="http://www.bu.edu/isso/travel-visas/traveltips/">automatic visa revalidation</a>.
+                    </p>
+                    <h2>Immigration Documents Issued by BU or USCIS</h2>
+                    <h3>
+                        Form I-20 or DS-2019 (for individuals in F or J status)
+                    </h3>
+                    <p>
+                        Your Form I-20 or DS-2019 gives a more detailed explanation of your program or affiliation at BU. The ISSO will issue this document for you through a system called SEVIS. If any terms of your program at BU change, the ISSO will need to issue you a new form to indicate those changes. The examples below outline the specific information to be included on your immigration document.<span class="highlight"><br /></span>
+                    </p>
+                    <p>
+                        The dates indicated on your BU-issued document reflect the dates of your current program or affiliation. If you will be extending your program at BU, the ISSO will issue a new document to reflect the extended dates of your program or affiliation.
+                    </p>
+                    <h2>U.S. Entry Stamp in Passport or I-94 Form</h2>
+                    <p>
+                        <a href="http://www.uky.edu/international/sites/www.uky.edu.international/files/u9/I94%20Stampss.png">
+                            <img src="http://www.uky.edu/international/sites/www.uky.edu.international/files/u9/I94%20Stampss.png" alt="I-94sample" class="size-medium wp-image-750 alignright" height="155" width="246" />
+                        </a>
+                        Upon arrival to the U.S., a customs officer will review your passport, visa, and immigration-specific document(s), and grant you entry to the U.S. The customs official will place an entry stamp in your passport which indicates your date of entry, category of admission (i.e., J-1, F-1, etc.), and length of permitted stay in the U.S.
+                    </p>
+                    <p>
+                        If the entry stamp is not clear or not properly notated or if you need to apply for employment or other benefits from federal government agencies, you must present a Form I-94, which includes more detailed information about your most recent entry to the US. <a href="http://www.cbp.gov/I94">Get your I-94 form</a>.
+                    </p>
+                    <h3>Entry Stamp by Status</h3>
+                    <ul>
+                        <li><b>If you have entered in either the F or J immigration classification</b>, your entry stamp should be marked with a "D/S" (duration of status) notation. This means that as long as you maintain that status, you may continue to remain lawfully in the U.S. as indicated on your BU-issued immigration document:
+                            <ul>
+                                <li>
+                                    Item #5 of your Form I-20, just after the phrase "and complete studies no later than"<br /><strong>or</strong>
+                                </li>
+                                <li>
+                                    Section 3 of your Form DS-2019, where it states the beginning and ending dates of your exchange program.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>If you entered in another immigration classification</b>, your entry stamp will be noted with a future date. This means that so long as you are maintaining the terms of your immigration classification, you may continue to remain lawfully in the U.S. until the date indicated on your entry stamp.
+                        </li>
+                    </ul>
+                </div>
+            
+                <div id="sta" style="display: none">
+                    <h1 style="text-align: center">Maintaining Status</h1>
+                    <p>
+                        Your immigration classification is based on your primary purpose in the U.S. There are things you need to be aware of and steps you need to take to maintain your lawful immigration status throughout your stay at BU.
+                    </p>
+                    <p>
+                        It is important to understand the requirements that govern your specific immigration classification and to communicate with the ISSO prior to taking part in activities that may negatively impact your legal status in the U.S. If you violate the terms of your status, you may need to take steps to <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/interruption/regaining-status/">regain legal status</a> through an application for reinstatement or through making a new entry to the U.S.
+                    </p>
+                    <h2>Your SEVIS Record</h2>
+                    <p>
+                        The Student and Exchange Visitor Information System, known as SEVIS, is a real-time electronic system used to maintain records for individuals in F or J status. Every F-1 student and J-1 exchange visitor has a unique SEVIS record. This record was created by the ISSO prior to issuing your immigration document. You can find your SEVIS number in the upper right corner of your immigration document.
+                    </p>
+                    <p>
+                        <b>New F-1 students, J-1 students, and J-1 scholars entering the U.S. for the first time in F-1 or J-1 status must pay a <a href="http://www.bu.edu/isso/travel-visas/apply-for-a-visa/fee/">SEVIS fee</a>.</b>
+                    </p>
+                    <h2>Full-Time Enrollment Requirement</h2>
+                    <p>
+                        A <a href="http://www.bu.edu/isso/immigration-status/immigration-overview/f-1-student-classification/">F-1</a> or <a href="http://www.bu.edu/isso/immigration-status/immigration-overview/j-1-student-classification/">J-1</a> student must register for and complete at least 12 credit hours each Fall and Spring Semester to maintain your immigration status. In some cases, the required credit hours for your degree program may exceed the 12 credit hours required for immigration purposes. <b>Dropping below 12 credits without prior authorization by the ISSO is considered a violation of your F-1 or J-1 immigration status and will result in a negative SEVIS record termination.</b>
+                    </p>
+                    <p>
+                        <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/courseload/">cClick here</a> for more information.
+                    </p>
+                    <h2>Semester Verification</h2>
+                    <p>
+                        Federal regulations require BU to notify the Department of Homeland Security about the physical presence and registration of every <a href="http://www.bu.edu/isso/immigration-status/immigration-overview/f-1-student-classification/">F-1</a> student each academic semester. We do this via your electronic SEVIS record once you have verified that you have returned to campus and are registered for a full course of study. <b>F-1 students continuing enrollment at BU must complete F-1 Semester Verification each semester.</b>
+                    </p>
+                    <p>
+                        <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/verification/">Click here</a> for more information. <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/verification/"><br /></a>
+                    </p>
+                    <h2>Program Extension</h2>
+                    <p>
+                        Your anticipated completion date can change for many reasons students may change majors or programs, or research can take unexpected (yet exciting) turns. This is normal in academia. If you need additional time to complete your studies or affiliation at BU, the ISSO can advise you on your options and the required paperwork.
+                    </p>
+                    <p>
+                        <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/extension/">Click here</a> for more information.
+                    </p>
+                    <h2>Change of Program/Appointment Information</h2>
+                    <p>
+                        Your immigration documents should accurately reflect the details of your BU affiliation at all times. Whether you are a student changing education level or degree program, or a scholar whose appointment terms are changing, <b>the ISSO must be notified in advance to assess whether the change will affect your current immigration status.</b>
+                    </p>
+                    <p>
+                        <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/change-of-program-appointment/">click</a> for more information.
+                    </p>
+                </div>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+            <div id="spreadwork" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showssn()">Social Security Number</a>
+                        <a class="btn btn-default" onclick="showemp()">On-Campus Student Employment</a>
+                        <a class="btn btn-default" onclick="showwor()">Student Off-Campus Work and Training</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="ssn">
+                    <h1 style="text-align: center">Social Security Number</h1>
+                    <p>
+                        A Social Security Number (SSN) is a unique identification number that allows the United States government to monitor your taxable wages earned as an employee in the U.S. As an international student or scholar, you only qualify for a Social Security Card if you have authorization to work in the U.S.
+                    </p>
+                    <p>
+                        The SSN does not give you U.S. employment authorization. It simply provides an identifying number for you to be paid for a U.S. job and for your employer to deduct the appropriate taxes on behalf of the U.S. Internal Revenue Service (IRS).
+                    </p>
+                    <h2>Eligibility</h2>
+                    <p>
+                        In order to qualify for a SSN, you must be physically present in the U.S. in an immigration classification that permits employment.
+                    </p>
+                    <p>
+                        Common immigration categories held by Boston University students and scholars include:
+                    </p>
+                    <h3>F-1 Students</h3>
+                    <p>
+                        You are eligible to apply for a SSN if you have any of the following types of U.S. work authorizations:
+                    </p>
+                    <ul>
+                        <li>
+                            An <a href="http://www.bu.edu/isso/employment-internships/social-security-cards/social_security_certification/">on-campus job</a> or have already begun working at an on-campus job
+                        </li>
+                        <li>
+                            Curricular Practical Training (CPT) authorization
+                        </li>
+                        <li>
+                            Optional Practical Training (OPT) authorization, and received your Employment Authorization Document (EAD); and the validity period of your EAD has begun
+                        </li>
+                    </ul>
+                    <h3>J-1 Students Sponsored by Boston University</h3>
+                    <p>
+                        You are eligible to apply for an SSN in either of these cases:
+                    </p>
+                    <ul>
+                        <li>
+                            If you have been authorized by the ISSO to begin an on-campus job
+                        </li>
+                        <li>
+                            If you have been granted Academic Training (AT) employment authorization for a job off campus
+                        </li>
+                    </ul>
+                    <h3>
+                        J-1 Students or Scholars Sponsored by an Outside Agency
+                    </h3>
+                    <p>
+                        Consult with your J-1 Exchange Program Sponsor to ask about whether you are eligible for U.S. work and about the documentation you will need to apply.
+                    </p>
+                    <h3>
+                        Students and Scholars with an Employment Authorization Document (EAD)
+                    </h3>
+                    <p>
+                        You are eligible to apply for your SSN after the validly period of the EAD has begun, and no later than 15 days prior to the expiration of the EAD. (Students in F-1 status, see above.)
+                    </p>
+                    <h2>Applying for a Social Security Card</h2>
+                    <p>
+                        You should obtain your Social Security Card before you begin any work in the U.S. If you begin employment without a Social Security Number, you must then inform your employer as soon as you receive your Social Security Number so that they can modify your withholdings for payroll purposes.
+                    </p>
+                    <h3>Documents for SSN Application</h3>
+                    <p>
+                        You must present <strong>all</strong> of the following documentation:
+                    </p>
+                    <ul>
+                        <li>
+                            A completed <a href="http://www.ssa.gov/online/ss-5.pdf">Application for a Social Security Card</a>. The application form is available at the ISSO, online, or at the Social Security Administration office.
+                        </li>
+                        <li>
+                            Unexpired foreign passport with U.S. visa stamped inside
+                        </li>
+                        <li>
+                            Original Form I-94 Departure card, if applicable, or <a href="https://i94.cbp.dhs.gov/I94/request.html">printout of I-94</a> entry information
+                        </li>
+                        <li>
+                            Additional documents depending on your immigration status to show U.S. employment authorization. These can be determined by downloading a full set of instructions which includes a <a href="http://www.bu.edu/isso/files/pdf/SocSecInstrructions.pdf">chart of the necessary additional documents</a>.
+                        </li>
+                    </ul>
+                    <h3>Where to Apply</h3>
+                    <p>
+                        You may submit an application for a Social Security Card to the Social Security Administration in person on any business day (except holidays) between the hours of 9 a.m. and 3:30 p.m. The Boston office is generally the most convenient location for BU students and scholars:
+                    </p>
+                    <p>
+                        <b>Social Security Administration</b><br />Thomas P. O Neill Federal Office Building<br />
+                        10 Causeway Street, Room 148<br />
+                        Boston, MA 02222<br />
+                        Phone: 800-772-1213
+                    </p>
+                    <p>
+                        By MBTA: North Station ST stop on the Green or Orange Line; the building is next to the TD Garden.
+                    </p>
+                    <p>
+                        For a map<a href="https://www.google.com/maps/place/10+Causeway+St,+Boston,+MA+02222/@42.364836,-71.0650494,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37091ca80c833:0x5db584a1a3579b97"> to the office</a>
+                    </p>
+                    <p>
+                        Know more about<a href="http://www.socialsecurity.gov">Social Security Office</a>
+                    </p>
+                    <h2>
+                        Receiving Your Social Security Card and Number
+                    </h2>
+                    <p>
+                        In most cases, a Social Security Card should be mailed to the address you listed on your application form within 14 business days. If you do not receive a Social Security Card within 30?0 days, you should contact the Social Security Administration via telephone at 800-772-1213 or visit the <a href="http://www.ssa.gov/">Social Security Administration</a> website to ask about the status of your pending application.
+                    </p>
+                    <p>
+                        The notation on the Social Security Card should read Valid for Employment Only with DHS Authorization". This clarifies to your employer that the Social Security Card itself does not give you work permission in the U.S. and that you will need to obtain separate work permission in order to start working. To find out more about employment authorization, please <a href="http://www.bu.edu/isso/contact/">contact a staff member</a> at the ISSO or visit the <a href="http://www.bu.edu/isso/employment-internships/">Employment and Internships</a> page on our website.<a href="http://www.bu.edu/isso/international-students-scholars-office/"><br /></a>
+                    </p>
+                    <p>
+                        It's important that you contact the Student Employment office Link, if:
+                    </p>
+                    <ul>
+                        <li>
+                            you are employed on campus as a student (or the Payroll office Link)
+                        </li>
+                        <li>
+                            you are employed at BU as a scholar to notify them of your new Social Security Number as soon as you receive your Social Security Card, so you can take advantage of tax exemptions and possible tax treaties
+                        </li>
+                    </ul>
+                    <h2>Additional Information</h2>
+                    <p>
+                        For more information about Social Security Numbers, visit one of these pages of the Social Security Administration website:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="http://www.ssa.gov/pubs/10181.html">International Students and Social Security Numbers</a>
+                        </li>
+                        <li>
+                            <a href="http://www.ssa.gov/pubs/10107.html">Foreign Workers and Social Security Numbers</a>
+                        </li>
+                        <li>
+                            <a href="http://www.ssa.gov/pubs/10096.html">Social Security Numbers For Noncitizens</a>
+                        </li>
+                        <li>
+                            <a href="http://www.ssa.gov/online/ss-5.html">Application for a Social Security Card</a>
+                        </li>
+                        <li>
+                            <a href="http://www.ssa.gov">Social Security Administration homepage</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="emp" style="display: none">
+                    <h1 style="text-align: center">On-Campus Student Employment</h1>
+                    <p>
+                        As an international student in F-1 and J-1 immigration status, you are authorized to work on campus during your program of study. If you hold another immigration category, you may be eligible to work if you have U.S. employment authorization.
+                    </p>
+                    <p>
+                        All international students must follow a few key steps before starting an on-campus job:
+                    </p>
+                    <ol>
+                        <li>
+                            <a href="http://www.bu.edu/isso/employment-internships/on-campus-student-employment/on-campus-jobs/">Find a job on campus</a> or with a qualified institutional affiliate.
+                        </li>
+                        <li>
+                            Register for a <a href="http://www.bu.edu/isso/immigration-status/maintaining-status/courseload/">full course of study</a>.
+                        </li>
+                        <li>
+                            <a href="http://www.bu.edu/isso/employment-internships/on-campus-student-employment/conditions/">Know</a> the conditions of your work permission.
+                        </li>
+                        <li>
+                            Obtain <a href="http://www.bu.edu/isso/employment-internships/on-campus-student-employment/obtain-isso-work-authorization/">ISSO work authorization</a>, if required.
+                        </li>
+                        <li>
+                            Complete an <a href="http://www.bu.edu/isso/employment-internships/on-campus-student-employment/i-9-employment-eligibility-verification/">I-9</a> Employment Eligibility Verification.
+                        </li>
+                        <li>
+                            Apply for a <a href="http://www.bu.edu/isso/employment-internships/social-security-cards/">Social Security Number</a>, if you don't have one.
+                        </li>
+                        <li>
+                            <a href="http://www.bu.edu/isso/employment-internships/taxinformation/">Understand the U.S. tax system</a> and research <a href="http://www.bu.edu/seo/students/taxes/taxes-international/">tax treaty</a> benefits available to you.
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="wor" style="display: none">
+                    <h1 style="text-align: center">Student Off-Campus Work and Training</h1>
+                    <p>
+                        Maybe you've been offered a management internship with a start-up company, or perhaps you want to build your resume by working at a firm or conducting research at another university's lab. Before accepting an off-campus internship, job, or any payment for services, you will need to be certain your F-1 or J-1 immigration status allows you to begin.
+                    </p>
+                    <p>
+                        Off-campus work permission for international students in the U.S. is quite limited, applications for certain employment authorizations can often take months to be approved, and that you must always have valid employment authorization to begin employment.
+                    </p>
+                    <h2>Training in Your Major Field</h2>
+                    <p>
+                        The most common types of student work permission are for major-related training:
+                    </p>
+                    <ul>
+                        <li>
+                            F-1 student <a href="http://www.bu.edu/isso/employment-internships/student-off-campus-work-and-training/curricular-practical-training-cpt-f-1/">Curricular Practical Training (CPT)</a>: for an internship or placement that is a necessary part of your academic program
+                        </li>
+                        <li>
+                            F-1 student <a href="http://www.bu.edu/isso/employment-internships/student-off-campus-work-and-training/optional/">Optional Practical Training (OPT)</a>: to gain practical experience in your major field of study, not required by your academic program
+                        </li>
+                        <li>
+                            F-1 student <a href="http://www.bu.edu/isso/employment-internships/student-off-campus-work-and-training/optional/17monthext/">17-Month STEM Extension of OPT</a>: an extension of Optional Practical Training, available only if your major field is on a designated list of specialized majors in science, technology, engineering, and mathematics (STEM) and if you are training at a qualified employer
+                        </li>
+                        <li>
+                            J-1 student <a href="http://www.bu.edu/isso/employment-internships/student-off-campus-work-and-training/academic/">Academic Training (AT)</a>: to gain practical experience in your major field of study
+                        </li>
+                    </ul>
+                    <h2>Other Circumstances</h2>
+                    <h3>Economic Hardship</h3>
+                    <ul>
+                        <li>
+                            F-1 and J-1 Student <a href="http://www.bu.edu/isso/employment-internships/student-off-campus-work-and-training/economic-hardship/">Severe Economic Hardship</a>: If you have experienced unexpected economic difficulties due to circumstances beyond your control, you may qualify for off-campus work permission to help you continue to meet the expenses of your academic program.
+                        </li>
+                    </ul>
+                    <h3>Work with International Organizations</h3>
+                    <ul>
+                        <li>
+                            F-1 student Work with <a href="http://www.state.gov/documents/organization/87183.pdf">International Organizations</a>: If you secure an internship placement or employment with a designated international organization, you may also qualify to apply for work permission for that organization.
+                        </li>
+                    </ul>
+                </div>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+            <div id="spreadtravel" style="display: none">
+                <div class="row text-center">
+                    <p>
+                        <a class="btn btn-default" onclick="showvis()">Applying for a Visa</a>
+                        <a class="btn btn-default" onclick="showent()">Entering the U.S.</a>
+                        <a class="btn btn-default" onclick="showtra()">Traveling with a US Visa</a>
+                    </p>
+                </div>
+
+                <hr />
+
+                <div id="vis">
+                    <h1 style="text-align: center">Applying for a Visa</h1>
+                    <p>
+                        As international students and scholars at BU, you must apply for the most appropriate visa that will allow you to enter the US to begin or resume your academic activities. The length of the visa will vary depending on your country of citizenship and your visa classification. The visa must always be valid when entering the US but is allowed to expire after you have entered the country. If you leave the US in the middle of your academic activities and plan to return to BU in the same visa classification to resume the same academic activities, you will need to make certain that your visa is still valid or renew your visa before you return to the US.
+                    </p>
+                    <h2>Make sure your passport is valid</h2>
+                    <p>
+                        In order to avoid possible problems in applying for a visa or entering the US, it is recommended that your passport be valid for at least six months beyond your expected entry date to the US.<b></b>
+                    </p>
+                    <h2>
+                        Make sure your immigration documents are correct
+                    </h2>
+                    <p>
+                        The documents that you need to support your visa classification will vary, please see the visa classifications below for specific details. To avoid delays in visa issuance and entering the US, the spelling of your name and your date of birth must be exactly the same as reflected in your passport. If your name or date of birth does not appear correctly on your documents, please notify the ISSO immediately.<br />
+                    </p>
+                    <ul>
+                        <li><strong>F-1 Students</strong></li>
+                        <p>
+                            <strong>Make sure the information on your SEVIS Form I-20 is correct.</strong>Your I-20 indicates that we expect you to enroll in a specific program of study at BU and that we have created a record for you in the Student and Exchange Visitor Information System (SEVIS). The I-20 includes dates and information about your intended program of study. You can find your unique SEVIS ID in the upper-right corner of page 1 of your I-20. If you have dependent family members (husband or wife, children under the age of 21) who will be traveling to the US with you, they will receive their own I-20 Forms to assist with their application(s) for F-2 visa(s). Please contact the ISSO if any information on your I-20 is incorrect, or if you need to request immigration documents for F-2 dependents.
+                        </p>
+                    </ul>
+                    <h2>
+                        Contact the nearest US embassy or consulate to apply for the visa
+                    </h2>
+                    <p>
+                        Citizens of all countries (except Canada) are required to be in possession of a valid visa to enter the US. You must initiate the visa application process with the <a href="http://www.usembassy.gov/">nearest US embassy or consulate</a>. It is strongly recommended that you review the website of that consular post to learn about their specific visa application procedures, documentary requirements, and deadlines. Most consular posts will process an application a maximum of 120 days prior to the start date of your academic activities.
+                    </p>
+                    <p>
+                        Please refer to the <a href="http://travel.state.gov/content/visas/english.html">US Department of State (DOS) website</a> for more information regarding visa appointment wait times at specific consulates and embassies, as well as any additional fees required. Fees and wait times may vary based on country of citizenship and visa classification.
+                    </p>
+                    <p>
+                        There are special procedures for citizens of Cuba, Syria, Sudan, and Iran when applying for a US visa. Please refer to the <a href="http://travel.state.gov/content/visas/english/general/countries-with-limited-or-no-u-s--visa-services.html">US DOS website</a> for more information.
+                    </p>
+                    <h2>
+                        Prepare the following documents for the visa interview:
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="http://www.travel.state.gov/visa/forms/forms_4230.html">Form DS-160: Online Nonimmigrant Visa Application</a> from the DOS website
+                        </li>
+                        <li>
+                            Application fee (check with the consulate for the fee amount and how it must be paid, or visit the <a href="http://travel.state.gov/visa/temp/types/types_1263.html">DOS website</a>)
+                        </li>
+                        <li>
+                            One photograph (you should review the consulate website to determine how to submit your photograph). Photo specifications are 2 inches square (51 x 51 mm), showing your full face, without a head covering, and against a light background, as explained on the <a href="http://travel.state.gov/visa/visaphotoreq/visaphotoreq_5334.html">DOS website</a>.
+                        </li>
+                        <li>
+                            Passport valid for at least six months beyond the expected date of entry to the US
+                        </li>
+                        <li>
+                            Additional documents, varying by visa classification (see below)
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="ent" style="display: none">
+                    <h1 style="text-align: center">Entering the U.S.</h1>
+                    <p>
+                        Once you have obtained your visa, you are ready to travel to the U.S. Bring all of your immigration documents that pertain to your status, and keep these documents with you at all times during your travel. Do not leave any of these documents in your luggage as you will need to present them for inspection at the U.S. port of entry before you can pick up your luggage in the U.S.
+                    </p>
+                    <h2>Applying for Admission</h2>
+                    <p>
+                        When you arrive, you will apply for official admission?to the U.S. in a particular immigration classification at a U.S. port of entry. A US Customs and Border Protection (USCBP) officer will examine the following documents:
+                    </p>
+                    <ul>
+                        <li>
+                            Passport (valid for at least six months beyond your date of entry to the U.S.)
+                        </li>
+                        <li>
+                            Valid visa that reflects your intended academic activities in the U.S.
+                        </li>
+                        <li>
+                            All immigration documents [Form I-20(s) for F-1 students, Form DS-2019(s) for J-1 students and scholars, I-797B for H-1Bs, etc.]
+                        </li>
+                    </ul>
+                    <p>
+                        You may also need to present all or some of the documents required to apply for your visa:
+                    </p>
+                    <ul>
+                        <li>
+                            Letter of admission or appointment/employment from Boston University
+                        </li>
+                        <li>Proof of F or J SEVIS fee payment</li>
+                        <li>Original financial documents</li>
+                        <li>
+                            Documents as a continuing student or scholar demonstrating your valid immigration status and your continued academic activities in the U.S.
+                        </li>
+                    </ul>
+                    <h2>Tips</h2>
+                    <p>
+                        Provided you present the proper documents and the USCBP officer is satisfied with your answers, the officer will admit you to the U.S. in a particular visa classification. The officer will update your U.S. Department of Homeland Security entry record electronically and will stamp your passport to reflect the:
+                    </p>
+                    <ul>
+                        <li>Day you entered the U.S.</li>
+                        <li>
+                            Immigration status in which you have been admitted to the U.S.
+                        </li>
+                        <li>
+                            Expiration date of this status ("D/S" reflects duration of status for F-1s, J-1s, and their dependent family members <strong>or</strong> a specific date for all other classifications)
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tra" style="display: none">
+                    <h1 style="text-align: center">Traveling with a US Visa</h1>
+                    <p>
+                        Many students and scholars take the opportunity to travel home or to another country during their time in the US. While you can make plans to depart the US at any time, you need to make certain that you have the <a href="http://www.bu.edu/isso/travel-visas/u-s-re-entry-documentation/">appropriate documentation</a> to return to the US to resume your activities. The information below will help facilitate your return to the US.
+                    </p>
+                    <h2>Check Your Visa(s)</h2>
+                    <p>
+                        The visa in your passport does not grant permission to enter a third country (a country that is not the US or your home country). If you are traveling to a third country, you may need a visa to enter that country.
+                    </p>
+                    <p>
+                        You need to contact the embassy or consulate of the country you will be traveling to and ask for specific information about visa requirements for citizens from your home country since the ISSO can only advise on re-entry to the US.
+                    </p>
+                    <h2>
+                        Returning from Canada, Mexico, or Adjacent Islands with an Expired US Visa
+                    </h2>
+                    <p>
+                        F and J nonimmigrants who travel to Canada, Mexico, or the adjacent islands (except for Cuba) may return to the US using an <em>expired</em> US visa. This rule is known as Automatic Visa Revalidation. To successfully use Automatic Visa Revalidation, travelers must have previously entered the US in a nonimmigrant visa category, and must be maintaining valid nonimmigrant status.
+                    </p>
+                    <p>
+                        For all other visa categories, Automatic Visa Revalidation does not apply. All other visa categories must have a <em>valid and current</em> US visa stamp in order to re-enter the US.
+                    </p>
+                    <p>
+                        If you have questions about safely re-entering the US from Canada, Mexico, or the adjacent islands using Automatic Visa Revalidation, please consult with the ISSO before you depart Boston.
+                    </p>
+                    <h3>Exceptions to the Automatic Visa Revalidation Rule</h3>
+                    <ul>
+                        <li>
+                            <b>Individuals who apply for a new visa stamp: </b><span style="font-size: 13px; line-height: 19px;">If you plan to apply for a nonimmigrant visa stamp at a US embassy or consulate in a contiguous territory (Canada, Mexico, or the adjacent islands), you will not be eligible to return to the US under Automatic Visa Revalidation. Instead, you must wait for the new visa to be approved and then return to the US under the new visa. If your visa application is denied, you will be required to travel elsewhere (most likely to your home country) to apply again for a US visa stamp before you may return to the US.</span>
+                        </li>
+                        <li>
+                            <b style="font-size: 13px; line-height: 19px;">Citizens of certain countries are not eligible for Automatic Visa Revalidation: </b>If you are a citizen of a country identified by the Department of State as a state that sponsors terrorism, you are not eligible for Automatic Visa Revalidation. Currently, this list includes Iran, North Korea, Sudan, Syria, and Cuba. The countries included on this list are subject to change, and you can find an updated list on the <a href="http://travel.state.gov/content/visas/english/general/automatic-revalidation.html">Department of State's website</a>.
+                        </li>
+                        <li>
+                            <b style="font-size: 13px; line-height: 19px;">Citizens of Mexico and adjacent islands: </b><span style="font-size: 13px; line-height: 19px;">Citizens of Mexico and countries of the adjacent islands are not eligible for Automatic Visa Revalidation when traveling to their home country. Citizens of Mexico and the adjacent islands </span><em style="font-size: 13px; line-height: 19px;">can</em><span style="font-size: 13px; line-height: 19px;"> use Automatic Visa Revalidation when traveling to Canada.</span>
+                        </li>
+                    </ul>
+                </div>
+                <p style="text-align:center">
+                    <a href="#top">back to top</a>
+                    <br />
+                    <a href="#top" onclick = "killall()">close</a>
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="text-align: center">
+                        <a href="index.aspx">BU Social</a>
+                    </p>
+                    <p style="text-align: center">Copyright &copy; BUSocial 2015</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
